@@ -1,0 +1,106 @@
+@import '../../styles/variables.scss';
+
+.Media {
+  box-shadow: inset 0px 100px 100px 25px black;
+}
+
+.Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+
+  @media (max-width: $md3) {
+    height: 200px;
+  }
+  @media (max-width: $md4) {
+    height: 150px;
+  }
+
+  .Particles {
+    position: absolute;
+    left: 220px;
+    top: 72px;
+
+    @media (max-width: $md3) {
+      top: 10px;
+    }
+    @media (max-width: $md4) {
+      width: 32px !important;
+    }
+  }
+}
+
+.Background {
+  width: 100%;
+  position: absolute;
+  height: 30vh;
+  max-height: 400px;
+  min-height: 200px;
+
+  @media (max-width: $md5) {
+    padding: 25px;
+  }
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.Links {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 30vh;
+  max-height: 400px;
+  min-height: 200px;
+
+  flex-wrap: wrap;
+
+  padding: 60px 0;
+
+  @media (max-width: $md3) {
+    gap: 3rem 0;
+    padding: 20px 0;
+  }
+  @media (max-width: $md4) {
+    gap: 2rem 0;
+    padding: 10px 0;
+  }
+
+  li {
+    flex: 0 1 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: inline-block;
+
+      > * {
+        width: 90px;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.1) translateY(-10%);
+        }
+
+        @media (max-width: $md3) {
+          width: 64px;
+        }
+        @media (max-width: $md4) {
+          width: 36px;
+        }
+        @media (max-width: $md5) {
+          width: 24px;
+        }
+      }
+    }
+  }
+}

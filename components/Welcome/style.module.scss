@@ -1,0 +1,116 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.Welcome {
+  position: relative;
+
+  .Particles1,
+  .Particles2,
+  .Particles3,
+  .Particles4,
+  .Particles5,
+  .Particles6 {
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+  }
+  .Particles1 {
+    top: 36px;
+    left: calc(42% + 100px);
+  }
+  .Particles2 {
+    top: 93px;
+    left: calc(42% + 180px);
+  }
+  .Particles3 {
+    left: 122px;
+    bottom: -150px;
+
+    @media (max-width: $md2) {
+      display: none;
+    }
+  }
+  .Particles4 {
+    top: 230px;
+    left: 70px;
+
+    @media (max-width: $md2) {
+      display: none;
+    }
+  }
+  .Particles5 {
+    top: 780px;
+    left: calc(42% + 255px);
+  }
+  .Particles6 {
+    right: 260px;
+    bottom: -320px;
+
+    @media (max-width: $md3) {
+      display: none;
+    }
+  }
+
+  .Circle {
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(47%, -87%);
+    z-index: 0;
+  }
+}
+
+.Greetings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-bottom: 10px;
+  padding-top: 100px;
+
+  @media (max-width: $md3) {
+    height: auto;
+  }
+
+  > div {
+    height: 100%;
+  }
+
+  * {
+    z-index: 20;
+  }
+}
+
+.ImageBlock {
+  display: flex;
+  overflow: hidden;
+  height: 140%;
+  z-index: 0;
+
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  transform: translateY(-50%);
+
+  @media (max-width: $md3) {
+    top: 50%;
+    height: 120%;
+  }
+  @media (max-width: $md4) {
+    top: 40%;
+    left: 65%;
+    height: 500px;
+  }
+  @media (max-width: $md5) {
+    left: 35%;
+  }
+}
+
+.Button {
+  z-index: 10;
+}
+
+.Line {
+  @include left_side_decorative_line;
+}

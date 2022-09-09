@@ -1,0 +1,82 @@
+@import '../../styles/variables.scss';
+
+.Form {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+
+  background-color: #0d0d0d;
+
+  padding: 40px 80px;
+
+  @media (max-width: $md2) {
+    padding: 40px 80px;
+  }
+
+  @media (max-width: $md3) {
+    padding: 70px 100px;
+  }
+
+  @media (max-width: $md4) {
+    padding: 70px 40px;
+  }
+
+  height: 100vh;
+  max-height: 800px;
+  overflow-y: auto;
+
+  // Background circle replace
+  // box-shadow: 0 0 100px 10px #ff5100;
+}
+
+.Button {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+
+  > div {
+    transform: none;
+  }
+
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.Background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  background-color: rgba(0, 0, 0, 0.9);
+
+  z-index: -2;
+}
+
+.Circle {
+  position: fixed;
+  left: 48%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+
+  width: 1200px;
+  z-index: -1;
+
+  pointer-events: none;
+}

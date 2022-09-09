@@ -1,0 +1,65 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.p {
+  font-weight: 700;
+
+  @include fluid-type(320px, 1600px, 16px, 24px);
+}
+
+.h1 {
+  line-height: 0.8;
+  letter-spacing: 0.5rem;
+  font-weight: 900;
+
+  @include fluid-type(320px, 1600px, 64px, 256px);
+}
+
+.h2 {
+  padding-left: calc(2px + (6 - 2) * ((100vw - 320px) / (1600 - 320)));
+
+  line-height: 0.9;
+  letter-spacing: 0.55rem;
+  font-weight: 900;
+
+  @include fluid-type(320px, 1600px, 32px, 128px);
+}
+
+.h3 {
+  padding-left: calc(2px + (6 - 2) * ((100vw - 320px) / (1600 - 320)));
+
+  letter-spacing: 0.07rem;
+  word-spacing: 0.5rem;
+  font-weight: 900;
+
+  @include fluid-type(320px, 1600px, 32px, 100px);
+}
+
+.h4 {
+  padding-left: calc(4px + (10 - 4) * ((100vw - 320px) / (1600 - 320)));
+
+  letter-spacing: 0.15rem;
+  word-spacing: 0.2rem;
+  font-weight: 500;
+
+  @include fluid-type(320px, 1600px, 18px, 72px);
+}
+
+.h5 {
+  padding-left: calc(4px + (10 - 4) * ((100vw - 320px) / (1600 - 320)));
+
+  line-height: 2.2;
+  letter-spacing: 0.5rem;
+  word-spacing: 0.4rem;
+  font-weight: 500;
+
+  @include fluid-type(320px, 1600px, 12px, 16px);
+}
+
+.small {
+  line-height: 2;
+  word-spacing: 0.3rem;
+  font-weight: 700;
+
+  @include fluid-type(320px, 1600px, 12px, 16px);
+}

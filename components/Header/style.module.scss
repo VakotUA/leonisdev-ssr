@@ -1,0 +1,159 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.Header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  height: 170px;
+
+  @media (max-width: $md3) {
+    height: 110px;
+  }
+}
+
+.Content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: static !important;
+
+  > * {
+    z-index: 100;
+  }
+
+  padding-bottom: 20px !important;
+}
+
+.Logo {
+  color: white;
+
+  margin-right: 30px;
+  z-index: 120;
+
+  @media (max-width: $md4) {
+    margin-right: 20px;
+  }
+
+  margin-left: calc(12px + (32 - 12) * ((100vw - 320px) / (1600 - 320)));
+}
+
+.Links {
+  display: inline-flex;
+  gap: 2rem;
+
+  a {
+    @media (max-width: $md4) {
+      display: none;
+    }
+
+    img {
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+.Navigation {
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+
+    margin-right: 2rem;
+
+    li {
+      font-size: 16px;
+      color: white;
+      font-weight: 500;
+
+      letter-spacing: 0.35rem;
+
+      @include hover_effect_underline;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+
+    &.Active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    padding: 170px 50px;
+
+    ul {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.Burger {
+  display: none;
+
+  @media (max-width: 1440px) {
+    display: block;
+  }
+}
+
+.Menu {
+  display: none;
+
+  @media (max-width: 1440px) {
+    display: block;
+  }
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // width: 300px;
+  padding: 20px;
+
+  .MenuButtons {
+    position: absolute;
+    right: 12px;
+    top: 20px;
+    transform: scale(0.8);
+  }
+
+  ul {
+    padding: 25px;
+    position: absolute;
+    top: 100px;
+    width: 230px;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,143 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.Stepper {
+  margin-top: 228px;
+  @media (max-width: $md3) {
+    margin-top: 100px;
+  }
+  @media (max-width: $md4) {
+    margin-top: 20px;
+  }
+
+  background-color: black;
+  box-shadow: 0 0 100px 100px black;
+
+  position: relative;
+  z-index: 2;
+  min-height: 960px;
+
+  .Circle {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    transform: translate(-85%, -40%);
+
+    @media (max-width: $md4) {
+      transform: translate(-85%, -40%) scale(0.8);
+    }
+  }
+}
+
+.Steps {
+  margin: 80px auto 0;
+  max-width: $md1;
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  padding: 0 50px 0 110px;
+  gap: 1rem;
+
+  .Step {
+    flex: 0 1 25%;
+    position: relative;
+
+    small {
+      position: absolute;
+      top: 72px;
+      left: 8px;
+    }
+
+    .Icon {
+      width: 80px !important;
+    }
+
+    .Line {
+      content: '';
+      height: 2px;
+      flex: 1 1;
+      background-color: white;
+      position: relative;
+
+      &::before,
+      &::after {
+        border: 7px solid transparent;
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 50%;
+      }
+      &::before {
+        border-bottom-color: white;
+        transform: translate(-50%, -100%);
+      }
+      &::after {
+        border-top-color: white;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  p {
+    margin-top: 25px;
+    margin-right: 1vw;
+    font-weight: 200;
+  }
+
+  .Title {
+    @include fluid-type(320px, 1600px, 18px, 32px);
+
+    font-weight: 900;
+  }
+
+  @media (max-width: $md2) {
+    flex-direction: column;
+    padding: 0 20px;
+
+    .Step {
+      display: flex;
+      width: 100%;
+      min-width: 320px;
+      gap: 2rem;
+
+      small {
+        top: 36px;
+        left: 0;
+        font-size: 10px;
+      }
+
+      > div {
+        flex-direction: column;
+      }
+
+      .Icon {
+        width: 40px !important;
+      }
+
+      .Line {
+        width: 2px;
+      }
+
+      .Title {
+        position: absolute;
+        top: -32px;
+        left: 72px;
+      }
+
+      p {
+        margin-bottom: 80px;
+      }
+    }
+  }
+}
+
+.Content > .Title {
+  padding-left: calc(18px + (32 - 18) * ((100vw - 320px) / (1600 - 320)));
+}

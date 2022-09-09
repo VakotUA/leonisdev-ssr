@@ -1,0 +1,34 @@
+@import './variables.scss';
+@import '../assets/fonts/stylesheet.scss';
+
+html,
+body {
+  color: rgb(255, 255, 255);
+  background-color: black;
+
+  font-family: 'Gilroy';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  background-image: url('./../assets/images/sparks_bg.jpg');
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-position: 0 0;
+
+  min-height: 100vh;
+  max-width: 100vw;
+
+  position: relative;
+}
+
+html:has(> body.scroll-lock),
+body.scroll-lock {
+  overflow-y: hidden;
+}

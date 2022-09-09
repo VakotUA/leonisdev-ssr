@@ -1,0 +1,138 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.Services {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
+  position: relative;
+
+  padding-top: 100px;
+
+  .Background1,
+  .Background2 {
+    position: absolute;
+  }
+
+  .Background1 {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset -100px 0 100px 50px black;
+  }
+  .Background2 {
+    background-color: black;
+    box-shadow: -300px 0 100px 0 black;
+    top: 0;
+    left: 70%;
+    right: 0;
+    bottom: 0;
+
+    @media (max-width: $md3) {
+      display: none;
+    }
+  }
+
+  .Content {
+    padding-top: 200px;
+    z-index: 2;
+
+    > .Title {
+      position: absolute;
+      top: 6rem;
+      padding-left: 0;
+      @media (max-width: $md3) {
+        top: 7rem;
+      }
+
+      z-index: 2;
+      display: inline-flex;
+
+      > div {
+        position: relative;
+        width: 150px;
+        height: 100px;
+
+        .Particles1 {
+          position: absolute;
+          top: 30px;
+          left: 100px;
+        }
+        .Particles2 {
+          position: absolute;
+          top: 40px;
+          left: 160px;
+        }
+      }
+    }
+
+    .Block {
+      width: 100%;
+      margin-bottom: 80px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .Title {
+        font-weight: 100;
+        letter-spacing: 0.55em;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+
+        padding-left: 0;
+
+        @media (max-width: $md3) {
+          font-size: calc(6px + 6vw);
+        }
+      }
+
+      ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        padding-left: 4px;
+
+        gap: 3rem 0;
+
+        li {
+          flex: 0 1 50%;
+          padding-right: 7rem;
+
+          @media (max-width: $md3) {
+            flex: 1 1 100%;
+            padding-right: 0;
+          }
+
+          .SubTitle {
+            position: relative;
+            margin-bottom: 1.5rem;
+
+            margin-left: 30px;
+
+            @include fluid-type(320px, 1600px, 24px, 32px);
+
+            &::before,
+            &::after {
+              border: 6px solid transparent;
+              position: absolute;
+              content: '';
+              left: -30px;
+              top: 50%;
+            }
+            &::before {
+              border-bottom-color: white;
+              transform: translateY(-100%);
+            }
+            &::after {
+              border-top-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

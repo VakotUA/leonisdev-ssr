@@ -1,0 +1,148 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.Targets {
+  position: relative;
+
+  .Image {
+    overflow: hidden;
+    height: 130%;
+    z-index: 0;
+
+    position: absolute;
+    right: -8%;
+    top: 60%;
+    transform: translateY(-50%);
+
+    @media (max-width: $md3) {
+      display: none;
+    }
+    @media (max-width: $md4) {
+      height: 100%;
+    }
+  }
+
+  .Particles1,
+  .Particles2,
+  .Particles3,
+  .Particles4,
+  .Particles5,
+  .Particles6 {
+    pointer-events: none;
+    position: absolute;
+    z-index: 10;
+  }
+  .Particles1 {
+    top: 36px;
+    left: calc(42% + 100px);
+  }
+  .Particles2 {
+    top: 93px;
+    left: calc(42% + 180px);
+  }
+  .Particles3 {
+    left: 122px;
+    bottom: -150px;
+
+    @media (max-width: $md3) {
+      display: none;
+    }
+  }
+  .Particles4 {
+    top: 230px;
+    left: 70px;
+
+    @media (max-width: $md2) {
+      display: none;
+    }
+  }
+  .Particles5 {
+    top: 780px;
+    left: calc(42% + 255px);
+
+    @media (max-width: $md3) {
+      display: none;
+    }
+  }
+  .Particles6 {
+    right: 260px;
+    bottom: -320px;
+  }
+
+  .Circle {
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(47%, -87%);
+    z-index: 0;
+  }
+}
+
+.Content {
+  max-height: 910px;
+  height: calc(100vh - 170px);
+  min-height: 600px;
+
+  @media (max-width: $md3) {
+    height: auto;
+  }
+
+  z-index: 12;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.Greetings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+
+  width: 100%;
+  min-height: 500px;
+  padding-bottom: 30px;
+  padding-top: 100px;
+
+  * {
+    z-index: 20;
+  }
+
+  padding-left: 25px;
+
+  @media (max-width: $md4) {
+    padding-left: 10px;
+  }
+}
+
+.Button {
+  margin-left: calc(4px + (10 - 4) * ((100vw - 320px) / (1600 - 320)));
+}
+
+.Line {
+  @include left_side_decorative_line;
+}
+
+.H4 {
+  font-weight: 700;
+}
+
+.H2 {
+  @include fluid-type(320px, 1600px, 50px, 200px);
+}
+
+.WeAre {
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  width: 50%;
+  margin-top: 50px;
+  @include left_side_decorative_line;
+
+  padding-left: calc(8px + (10 - 8) * ((100vw - 320px) / (1600 - 320)));
+
+  @media (max-width: $md3) {
+    width: 100%;
+    padding-left: 12px;
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../../styles/variables.scss';
+
+.Container {
+  width: 100%;
+  max-width: 1685px;
+  padding: 0 24px 0 36px;
+  margin: 0 auto;
+
+  position: relative;
+
+  @media (max-width: $md2) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $md4) {
+    padding: 0 12px;
+  }
+}

@@ -1,0 +1,102 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.Technologies {
+  position: relative;
+  box-shadow: inset 0px 0px 100px 50px black;
+
+  .Title {
+    display: flex;
+
+    > div {
+      &:last-child {
+        flex: 0 1 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: $md4) {
+        flex: 0 1 1;
+        &:last-child {
+          > * {
+            width: 36px !important;
+          }
+        }
+      }
+    }
+    p {
+      font-weight: 700;
+      text-align: right;
+    }
+  }
+
+  .List {
+    margin-top: 90px;
+    margin-right: 20%;
+
+    @media (max-width: $md4) {
+      margin-top: 25px;
+      margin-right: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 3rem 4rem;
+
+      @media (max-width: $md3) {
+        gap: 2rem 2rem;
+      }
+
+      img {
+        @media (max-width: $md2) {
+          height: 100px;
+        }
+        @media (max-width: $md3) {
+          height: 72px;
+        }
+        @media (max-width: $md4) {
+          height: 56px;
+        }
+      }
+    }
+  }
+
+  .Image {
+    position: absolute;
+    z-index: 1;
+
+    height: 750px;
+
+    right: 0;
+    bottom: -250px;
+    @media (max-width: $md3) {
+      height: 500px;
+
+      bottom: -100px;
+    }
+
+    @media (max-width: $md4) {
+      display: none;
+    }
+
+    filter: drop-shadow(-500px 50px 50px black);
+  }
+
+  .Circle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(82%, -50%);
+  }
+}
+
+.CustomLetterSpacing {
+  letter-spacing: 0.13rem !important;
+}
+
+.Content {
+  z-index: 2;
+}

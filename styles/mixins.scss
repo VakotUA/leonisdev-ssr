@@ -1,0 +1,77 @@
+@use 'sass:math';
+
+@mixin hover_effect_underline {
+  position: relative;
+
+  &::after {
+    content: '';
+    background-color: white;
+    width: 0;
+    height: 1px;
+    opacity: 0;
+    transition: opacity 0.3s, width 0.3s;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+  }
+
+  &.Active::after {
+    width: 50%;
+    height: 2px;
+    opacity: 1;
+  }
+
+  &:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  cursor: pointer;
+}
+
+@mixin left_side_decorative_line {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100vw;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 12px;
+
+    opacity: 0.25;
+  }
+}
+
+// https://css-tricks.com/snippets/css/fluid-typography/
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
