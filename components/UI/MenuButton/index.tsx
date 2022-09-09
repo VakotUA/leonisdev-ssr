@@ -13,7 +13,7 @@ export const MenuButton: React.FC<{ className?: string }> = ({ className }) => {
   const [locked, setLocked] = useLockedBody()
   useEffect(() => {
     setLocked(isActive)
-  }, [isActive])
+  }, [isActive, setLocked])
 
   return (
     <div

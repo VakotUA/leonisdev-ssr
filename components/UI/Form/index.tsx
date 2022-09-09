@@ -99,7 +99,7 @@ export const ContactForm: React.FC = () => {
         <Button className={style.Button} type="submit">
           SEND MESSAGE
           <span className={style.Arrow}>
-            <Image src={Arrow} height={25} width={50} />
+            <Image src={Arrow} alt="arrow" height={25} width={50} />
           </span>
         </Button>
       </div>

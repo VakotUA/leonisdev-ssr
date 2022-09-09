@@ -28,7 +28,7 @@ const Welcome: React.FC = () => {
   const [locked, setLocked] = useLockedBody()
   useEffect(() => {
     setLocked(isModalVisible)
-  }, [isModalVisible])
+  }, [isModalVisible, setLocked])
 
   return (
     <>

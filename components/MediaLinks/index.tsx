@@ -34,7 +34,7 @@ const Media: React.FC = () => {
       </Container>
 
       <div className={style.Background}>
-        <Image src={EyesImage} />
+        <Image src={EyesImage} alt="lion" />
       </div>
 
       <motion.ul
@@ -44,32 +44,32 @@ const Media: React.FC = () => {
         className={style.Links}
       >
         <motion.li custom={1} variants={TextAnimations.bottomToTop}>
-          <a href="/">
+          <a href="#">
             <Image src={Telegram} alt="telegram" />
           </a>
         </motion.li>
         <motion.li custom={2} variants={TextAnimations.bottomToTop}>
-          <a href="/">
+          <a href="#">
             <Image src={Instagram} alt="telegram" />
           </a>
         </motion.li>
         <motion.li custom={3} variants={TextAnimations.bottomToTop}>
-          <a href="/">
+          <a href="#">
             <Image src={LinkedIn} alt="telegram" />
           </a>
         </motion.li>
         <motion.li custom={3} variants={TextAnimations.bottomToTop}>
-          <a href="/">
+          <a href="#">
             <Image src={Facebook} alt="telegram" />
           </a>
         </motion.li>
         <motion.li custom={2} variants={TextAnimations.bottomToTop}>
-          <a href="/">
+          <a href="#">
             <Image src={Twitter} alt="telegram" />
           </a>
         </motion.li>
         <motion.li custom={1} variants={TextAnimations.bottomToTop}>
-          <a href="/">
+          <a href="#">
             <Image src={YouTube} alt="telegram" />
           </a>
         </motion.li>

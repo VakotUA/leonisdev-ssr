@@ -23,5 +23,6 @@ export const Button = React.forwardRef<Ref, Props>(
     </button>
   )
 )
+Button.displayName = 'Button'
 
 export const MotionButton = motion(Button)

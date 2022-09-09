@@ -95,7 +95,7 @@ const Skills: React.FC = () => {
               >
                 HOW DOES THE MAGIC HAPPEN?
                 <span className={style.Arrow}>
-                  <Image src={Arrow} height={25} width={50} />
+                  <Image src={Arrow} alt="arrow" height={25} width={50} />
                 </span>
               </MotionButton>
             </Link>
@@ -119,7 +119,7 @@ const Skills: React.FC = () => {
                 custom={2.5}
                 variants={TextAnimations.rightToLeft}
               >
-                WE BUILD WEBSITES AND APPS, SO YOU DON'T HAVE TO!
+                WE BUILD WEBSITES AND APPS, SO YOU DON&apos;T HAVE TO!
               </Text.H5>
             </div>
             <div className={style.Text}>

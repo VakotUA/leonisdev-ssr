@@ -208,8 +208,8 @@ const Services: React.FC = () => {
                 variants={TextAnimations.topToBottom}
               >
                 A number of products are designed in the appropriate corporate
-                style, with the company's logo on it, for it's distribution and
-                brand promotion.
+                style, with the company&apos;s logo on it, for it&apos;s
+                distribution and brand promotion.
               </Text.Small>
             </li>
 
@@ -226,8 +226,8 @@ const Services: React.FC = () => {
                 custom={5.5}
                 variants={TextAnimations.topToBottom}
               >
-                Creating a unique quality design for the company's product that
-                will help attract more consumers and roles and raise sales.
+                Creating a unique quality design for the company&apos;s product
+                that will help attract more consumers and roles and raise sales.
               </Text.Small>
             </li>
 
@@ -297,10 +297,10 @@ const Services: React.FC = () => {
                 custom={2.5}
                 variants={TextAnimations.topToBottom}
               >
-                Forming a "portrait" of customers, gathering informatio about
-                their priorities and habits through communication, the use of
-                web analytics to determine the characteristics of traffic.
-                Development of marketing strategy.
+                Forming a &quot;portrait&quot; of customers, gathering
+                informatio about their priorities and habits through
+                communication, the use of web analytics to determine the
+                characteristics of traffic. Development of marketing strategy.
               </Text.Small>
             </li>
 
@@ -356,8 +356,8 @@ const Services: React.FC = () => {
               >
                 Creation of high-quality photos with the help of prefessional
                 equipment, development of images by designers that will
-                correspond to the context of the company's activities and the
-                chosen goal of propmotion.
+                correspond to the context of the company&apos;s activities and
+                the chosen goal of propmotion.
               </Text.Small>
             </li>
 

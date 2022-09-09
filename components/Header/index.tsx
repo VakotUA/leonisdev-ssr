@@ -38,6 +38,7 @@ const Header: React.FC = () => {
               height={80}
               width={280}
               src={LogoSVG}
+              alt="logo"
               className={style.Logo}
             />
           </Link>

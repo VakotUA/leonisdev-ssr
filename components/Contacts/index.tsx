@@ -35,7 +35,7 @@ const Contacts: React.FC = () => {
             GET IN TOUCH
           </Text.H3>
           <Text.H5 custom={2} variants={TextAnimations.leftToRight}>
-            LET'S MAKE GREAT THINGS HAPPEN
+            LET&apos;S MAKE GREAT THINGS HAPPEN
           </Text.H5>
         </motion.div>
       </Container>
