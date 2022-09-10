@@ -22,7 +22,8 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "sass": "^1.54.5",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "sharp": "^0.31.0"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",

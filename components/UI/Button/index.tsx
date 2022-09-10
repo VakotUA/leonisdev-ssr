@@ -12,7 +12,7 @@ interface Props {
 export type Ref = HTMLButtonElement
 
 export const Button = React.forwardRef<Ref, Props>(
-  ({ onClick, type, children, className }, ref) => (
+  ({ onClick, type = 'button', children, className }, ref) => (
     <button
       ref={ref}
       className={`${style.Button} ${className}`}

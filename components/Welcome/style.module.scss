@@ -83,27 +83,18 @@
 }
 
 .ImageBlock {
-  display: flex;
-  overflow: hidden;
-  height: 140%;
-  z-index: 0;
+  // display: flex;
 
   position: absolute;
-  left: 60%;
-  top: 60%;
+  left: 55%;
+  top: 55%;
   transform: translateY(-50%);
 
-  @media (max-width: $md3) {
-    top: 50%;
-    height: 120%;
-  }
   @media (max-width: $md4) {
     top: 40%;
-    left: 65%;
-    height: 500px;
   }
   @media (max-width: $md5) {
-    left: 35%;
+    top: 30%;
   }
 }
 

@@ -6,13 +6,15 @@ import { Text } from '../UI/Text'
 import { Cross } from '../UI/Particles'
 import Circle from '../../assets/images/ellipse.png'
 
-import LionImage1 from '../../assets/images/frames/1.png'
-import LionImage2 from '../../assets/images/frames/2.png'
-import LionImage3 from '../../assets/images/frames/3.png'
-import LionImage4 from '../../assets/images/frames/4.png'
-import LionImage5 from '../../assets/images/frames/5.png'
-import LionImage6 from '../../assets/images/frames/6.png'
-import LionImage7 from '../../assets/images/frames/7.png'
+// import LionImage1 from '../../assets/images/frames/1.png'
+// import LionImage2 from '../../assets/images/frames/2.png'
+// import LionImage3 from '../../assets/images/frames/3.png'
+// import LionImage4 from '../../assets/images/frames/4.png'
+// import LionImage5 from '../../assets/images/frames/5.png'
+// import LionImage6 from '../../assets/images/frames/6.png'
+// import LionImage7 from '../../assets/images/frames/7.png'
+
+import LionImage from '../../assets/images/lion_main.png'
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { TextAnimations } from '../../assets/animations/text'
@@ -108,6 +110,23 @@ const Welcome: React.FC = () => {
                 delay: 1.2,
               }}
             >
+              <Image src={LionImage} alt="lion" />
+            </motion.div>
+          </div>
+
+          {/* Build Error: Expected positive integer for width but received 0 of type number (from "Sharp" library) */}
+          {/* <div className={style.ImageBlock}>
+            <motion.div
+              animate={{ y: ['50px', '-10px', '30px', '-20px', '50px'] }}
+              transition={{
+                repeat: Infinity,
+                duration: 15,
+                type: 'spring',
+                damping: 25,
+                stiffness: 500,
+                delay: 1.2,
+              }}
+            >
               <Image src={LionImage1} alt="lion" />
             </motion.div>
 
@@ -189,7 +208,7 @@ const Welcome: React.FC = () => {
             >
               <Image src={LionImage7} alt="lion" />
             </motion.div>
-          </div>
+          </div> */}
         </Container>
 
         <Cross.Filled size="80px" className={style.Particles1} />
