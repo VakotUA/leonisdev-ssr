@@ -68,43 +68,69 @@ const Technologies: React.FC = () => {
         >
           <ul>
             <motion.li custom={1} variants={TextAnimations.topToBottom}>
-              <Image src={HTML} alt="html" />
+              <div className={style.TechnologyImage}>
+                <Image src={HTML} alt="html" />
+              </div>
             </motion.li>
             <motion.li custom={2} variants={TextAnimations.topToBottom}>
-              <Image src={CSS} alt="css" />
+              <div className={style.TechnologyImage}>
+                <Image src={CSS} alt="css" />
+              </div>
             </motion.li>
             <motion.li custom={3} variants={TextAnimations.topToBottom}>
-              <Image src={JS} alt="js" />
+              <div className={style.TechnologyImage}>
+                <Image src={JS} alt="js" />
+              </div>
             </motion.li>
             <motion.li custom={4} variants={TextAnimations.topToBottom}>
-              <Image src={Jquery} alt="jquery" />
+              <div className={style.TechnologyImage}>
+                <Image src={Jquery} alt="jquery" />
+              </div>
             </motion.li>
             <motion.li custom={5} variants={TextAnimations.topToBottom}>
-              <Image src={JQUI} alt="jqui" />
+              <div className={style.TechnologyImage}>
+                <Image src={JQUI} alt="jqui" />
+              </div>
             </motion.li>
             <motion.li custom={6} variants={TextAnimations.topToBottom}>
-              <Image src={Ps} alt="pa" />
+              <div className={style.TechnologyImage}>
+                <Image src={Ps} alt="pa" />
+              </div>
             </motion.li>
             <motion.li custom={7} variants={TextAnimations.topToBottom}>
-              <Image src={Ai} alt="ai" />
+              <div className={style.TechnologyImage}>
+                <Image src={Ai} alt="ai" />
+              </div>
             </motion.li>
             <motion.li custom={8} variants={TextAnimations.topToBottom}>
-              <Image src={Django} alt="django" />
+              <div className={style.TechnologyImage}>
+                <Image src={Django} alt="django" />
+              </div>
             </motion.li>
             <motion.li custom={9} variants={TextAnimations.topToBottom}>
-              <Image src={Selenium} alt="selenium" />
+              <div className={style.TechnologyImage}>
+                <Image src={Selenium} alt="selenium" />
+              </div>
             </motion.li>
             <motion.li custom={10} variants={TextAnimations.topToBottom}>
-              <Image src={ReactIMG} alt="react" />
+              <div className={style.TechnologyImage}>
+                <Image src={ReactIMG} alt="react" />
+              </div>
             </motion.li>
             <motion.li custom={11} variants={TextAnimations.topToBottom}>
-              <Image src={Python} alt="python" />
+              <div className={style.TechnologyImage}>
+                <Image src={Python} alt="python" />
+              </div>
             </motion.li>
             <motion.li custom={12} variants={TextAnimations.topToBottom}>
-              <Image src={VueJS} alt="vuejs" />
+              <div className={style.TechnologyImage}>
+                <Image src={VueJS} alt="vuejs" />
+              </div>
             </motion.li>
             <motion.li custom={13} variants={TextAnimations.topToBottom}>
-              <Image src={MySQL} alt="mysql" />
+              <div className={style.TechnologyImage}>
+                <Image src={MySQL} alt="mysql" />
+              </div>
             </motion.li>
           </ul>
         </motion.div>

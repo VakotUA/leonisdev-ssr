@@ -121,19 +121,23 @@
     }
 
     @media (max-width: $md3) {
-      margin-top: 300px;
+      margin-top: 50px;
       padding: 70px 100px;
     }
 
     @media (max-width: $md4) {
-      margin-top: 300px;
       padding: 70px 40px;
     }
 
     .Image {
       position: absolute;
       z-index: 10;
-      top: -296px;
+      // top: -296px;
+      bottom: calc(100% - 28px);
+
+      @media (max-width: $md3) {
+        display: none;
+      }
     }
   }
 }

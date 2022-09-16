@@ -44,22 +44,14 @@
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
-      gap: 3rem 4rem;
+      gap: 2rem 3rem;
 
       @media (max-width: $md3) {
-        gap: 2rem 2rem;
+        gap: 1rem 1rem;
       }
 
-      img {
-        @media (max-width: $md2) {
-          height: 100px;
-        }
-        @media (max-width: $md3) {
-          height: 72px;
-        }
-        @media (max-width: $md4) {
-          height: 56px;
-        }
+      @media (max-width: $md4) {
+        justify-content: center;
       }
     }
   }
@@ -99,4 +91,8 @@
 
 .Content {
   z-index: 2;
+}
+
+.TechnologyImage {
+  transform: scale(0.8);
 }
