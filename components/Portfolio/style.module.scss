@@ -35,25 +35,6 @@
 }
 
 .TabContent {
-  position: relative;
-
-  z-index: 1;
-
-  .Image {
-    position: absolute;
-    left: 60%;
-    bottom: 90%;
-
-    min-height: 400px;
-
-    transform: rotate(2deg);
-    z-index: -1;
-
-    @media (max-width: $md3) {
-      display: none;
-    }
-  }
-
   ul {
     display: flex;
     flex-wrap: wrap;

@@ -68,10 +68,6 @@ const Portfolio: React.FC = () => {
       </Container>
 
       <div className={style.TabContent}>
-        <div className={style.Image}>
-          <Image src={LionImage} alt="lion" />
-        </div>
-
         <ul>
           {config &&
             config.map((item, index) => (

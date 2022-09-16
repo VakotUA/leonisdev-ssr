@@ -76,10 +76,6 @@ const Contacts: React.FC = () => {
           className={style.Form}
           variants={TextAnimations.rightToLeft}
         >
-          <div className={style.Image}>
-            <Image height={320} src={FormLion} alt="lion" />
-          </div>
-
           <Cross.Filled size="64px" className={style.Particles} />
           <Form />
         </motion.div>
