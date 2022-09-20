@@ -34,7 +34,13 @@ const Media: React.FC = () => {
       </Container>
 
       <div className={style.Background}>
-        <Image src={EyesImage} alt="lion" />
+        <Image
+          src={EyesImage}
+          alt="lion"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="left"
+        />
       </div>
 
       <motion.ul

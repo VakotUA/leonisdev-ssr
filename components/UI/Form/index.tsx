@@ -4,6 +4,7 @@ import { Button } from '../Button'
 import { Text } from '../Text'
 import Arrow from '../../../assets/svgs/arrow.svg'
 import Image from 'next/image'
+import axios from 'axios'
 
 interface IForm {
   name: string
@@ -19,17 +20,48 @@ export const ContactForm: React.FC = () => {
     email: '',
     message: '',
   })
+  const [isFinished, setIsFinished] = useState<boolean>(false)
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
 
-    console.log(details)
+    const TOCKEN = '5573653105:AAE51cp92EQj4L8GAKsFrCcwC0Rg5nwXu74'
+    const CHAT_ID = '-1001747841534'
+
+    let message =
+      `Name: ${details.name}\n` +
+      `Phone: ${details.phone}\n` +
+      `Email: ${details.email}\n` +
+      `Message: ${details.message}\n`
+
+    axios
+      .post(`https://api.telegram.org/bot${TOCKEN}/sendMessage`, {
+        chat_id: CHAT_ID,
+        text: message,
+      })
+      .then(() => {
+        setDetails({
+          name: '',
+          phone: '',
+          email: '',
+          message: '',
+        })
+        setIsFinished(true)
+      })
+      .catch((error) => {
+        console.error(error)
+      })
   }
 
   return (
     <form className={style.Form} onSubmit={handleSubmit}>
       <div>
-        <Text.H3 className={style.Title}>WRITE A MESSAGE</Text.H3>
+        <Text.H3 className={style.Title}>
+          WRITE A MESSAGE{' '}
+          {isFinished && (
+            <Text.Small className={style.Success}>MESSAGE SENT</Text.Small>
+          )}
+        </Text.H3>
 
         <div className={style.formGroup}>
           <input

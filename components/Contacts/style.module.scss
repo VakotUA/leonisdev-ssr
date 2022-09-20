@@ -41,6 +41,7 @@
 
 .Collumns {
   display: flex;
+  min-height: 700px;
 
   @media (max-width: $md3) {
     flex-direction: column;
@@ -112,6 +113,10 @@
 
   .Form {
     flex: 0 1 45%;
+
+    @media (min-width: $md3) {
+      min-width: 700px;
+    }
 
     margin-top: 80px;
     position: relative;
