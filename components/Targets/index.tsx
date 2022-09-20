@@ -31,7 +31,6 @@ const Targets: React.FC = () => {
       </div>
 
       <Container className={style.Content}>
-        <div />
         <div className={style.Greetings}>
           <Text.H5
             custom={1}

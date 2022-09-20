@@ -16,7 +16,7 @@
 .Container {
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 720px;
 
   background-color: #0d0d0d;
 
@@ -37,6 +37,13 @@
   height: 100vh;
   max-height: 800px;
   overflow-y: auto;
+
+  // hide scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 
   // Background circle replace
   // box-shadow: 0 0 100px 10px #ff5100;

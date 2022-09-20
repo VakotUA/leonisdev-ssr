@@ -69,13 +69,13 @@ const Header: React.FC = () => {
             >
               <Link href="/magic/#services">SERVICES</Link>
             </motion.li>
-            <motion.li
+            {/* <motion.li
               custom={2}
               variants={TextAnimations.topToBottom}
               onClick={() => dispatch(toggleMenu(false))}
             >
               <Link href="/#portfolio">PORTFOLIO</Link>
-            </motion.li>
+            </motion.li> */}
             <motion.li
               custom={2.5}
               variants={TextAnimations.topToBottom}
