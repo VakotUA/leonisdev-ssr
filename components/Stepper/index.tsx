@@ -38,7 +38,7 @@ const Stepper: React.FC = () => {
         >
           <motion.div custom={1} variants={TextAnimations.leftToRight}>
             <small>01</small>
-            <Cross.Filled className={style.Icon} />
+            <Cross.Filled className={style.Icon} size={'80px'} />
             <div className={style.Line} />
           </motion.div>
           <Text.P
@@ -67,7 +67,7 @@ const Stepper: React.FC = () => {
         >
           <motion.div custom={2} variants={TextAnimations.leftToRight}>
             <small>02</small>
-            <Cross.Filled className={style.Icon} />
+            <Cross.Filled className={style.Icon} size={'80px'} />
             <div className={style.Line} />
           </motion.div>
           <Text.P
@@ -95,7 +95,7 @@ const Stepper: React.FC = () => {
         >
           <motion.div custom={3} variants={TextAnimations.topToBottom}>
             <small>03</small>
-            <Cross.Filled className={style.Icon} />
+            <Cross.Filled className={style.Icon} size={'80px'} />
             <div className={style.Line} />
           </motion.div>
           <Text.P
@@ -123,7 +123,7 @@ const Stepper: React.FC = () => {
         >
           <motion.div custom={4} variants={TextAnimations.topToBottom}>
             <small>04</small>
-            <Cross.Filled className={style.Icon} />
+            <Cross.Filled className={style.Icon} size={'80px'} />
             <div className={style.Line} />
           </motion.div>
           <Text.P
@@ -151,7 +151,7 @@ const Stepper: React.FC = () => {
         >
           <motion.div custom={5} variants={TextAnimations.topToBottom}>
             <small>05</small>
-            <Cross.Filled className={style.Icon} />
+            <Cross.Filled className={style.Icon} size={'80px'} />
           </motion.div>
           <Text.P
             custom={6}

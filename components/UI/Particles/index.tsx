@@ -12,14 +12,14 @@ interface Props {
 }
 
 const Filled: React.FC<Props> = ({ size = '32px', className }) => (
-  <div className={`${style.Filled} ${className}`} style={{ width: size }}>
-    <Image src={CrossFilled} alt="filled" />
+  <div className={`${style.Filled} ${className}`}>
+    <Image src={CrossFilled} alt="filled" width={size} height={size} />
   </div>
 )
 
 const Outlined: React.FC<Props> = ({ size = '32px', className }) => (
-  <div className={`${style.Outlined} ${className}`} style={{ width: size }}>
-    <Image src={CrossOutlined} alt="outlined" />
+  <div className={`${style.Outlined} ${className}`}>
+    <Image src={CrossOutlined} alt="outlined" width={size} height={size} />
   </div>
 )
 

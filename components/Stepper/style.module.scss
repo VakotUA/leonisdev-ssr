@@ -46,17 +46,8 @@
     small {
       position: absolute;
 
-      top: 40px;
+      top: 70px;
       left: -6px;
-
-      @media (max-width: $md3) {
-        top: 72px;
-        left: 8px;
-      }
-    }
-
-    .Icon {
-      width: 80px !important;
     }
 
     .Line {
