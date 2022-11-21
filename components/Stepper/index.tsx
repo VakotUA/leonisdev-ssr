@@ -44,6 +44,7 @@ const Stepper: React.FC = () => {
       <div className={style.Steps}>
         {STEPS.map((item: Step, index: number) => (
           <motion.div
+            key={index}
             className={style.Step}
             initial="hidden"
             whileInView="visible"
