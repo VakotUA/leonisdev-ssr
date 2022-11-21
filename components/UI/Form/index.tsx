@@ -6,6 +6,8 @@ import Arrow from '../../../assets/svgs/arrow.svg'
 import Image from 'next/image'
 import axios from 'axios'
 
+import useTranslation from 'next-translate/useTranslation'
+
 interface IForm {
   name: string
   phone: string
@@ -14,6 +16,8 @@ interface IForm {
 }
 
 export const ContactForm: React.FC = () => {
+  const { t } = useTranslation('common')
+
   const [details, setDetails] = useState<IForm>({
     name: '',
     phone: '',
@@ -57,7 +61,7 @@ export const ContactForm: React.FC = () => {
     <form className={style.Form} onSubmit={handleSubmit}>
       <div>
         <Text.H3 className={style.Title}>
-          WRITE A MESSAGE{' '}
+          {t('contacts.form.title')}{' '}
           {isFinished && (
             <Text.Small className={style.Success}>MESSAGE SENT</Text.Small>
           )}
@@ -74,7 +78,7 @@ export const ContactForm: React.FC = () => {
             value={details.name}
           />
           <label htmlFor="name">
-            <Text.P>NAME</Text.P>
+            <Text.P>{t('contacts.form.name')}</Text.P>
           </label>
         </div>
 
@@ -90,7 +94,7 @@ export const ContactForm: React.FC = () => {
             required
           />
           <label htmlFor="phone">
-            <Text.P>PHONE NUMBER</Text.P>
+            <Text.P>{t('contacts.form.phone')}</Text.P>
           </label>
         </div>
 
@@ -107,7 +111,7 @@ export const ContactForm: React.FC = () => {
           />
 
           <label htmlFor="email">
-            <Text.P>EMAIL</Text.P>
+            <Text.P>{t('contacts.form.mail')}</Text.P>
           </label>
         </div>
 
@@ -124,12 +128,12 @@ export const ContactForm: React.FC = () => {
           />
 
           <label htmlFor="message">
-            <Text.P>MESSAGE</Text.P>
+            <Text.P>{t('contacts.form.message')}</Text.P>
           </label>
         </div>
 
         <Button className={style.Button} type="submit">
-          SEND MESSAGE
+          {t('contacts.form.send')}
           <span className={style.Arrow}>
             <Image src={Arrow} alt="arrow" height={25} width={50} />
           </span>

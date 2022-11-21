@@ -15,7 +15,11 @@ import { TextAnimations } from '../../assets/animations/text'
 import { Cross } from '../UI/Particles'
 import Image from 'next/image'
 
+import useTranslation from 'next-translate/useTranslation'
+
 const Contacts: React.FC = () => {
+  const { t } = useTranslation('common')
+
   return (
     <motion.footer
       id="contacts"
@@ -32,10 +36,10 @@ const Contacts: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
         >
           <Text.H3 custom={1} variants={TextAnimations.leftToRight}>
-            GET IN TOUCH
+            {t('contacts.title')}
           </Text.H3>
           <Text.H5 custom={2} variants={TextAnimations.leftToRight}>
-            LET&apos;S MAKE GREAT THINGS HAPPEN
+            {t('contacts.subtitle')}
           </Text.H5>
         </motion.div>
       </Container>

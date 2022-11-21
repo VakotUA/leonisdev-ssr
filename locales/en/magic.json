@@ -1,0 +1,127 @@
+{
+  "targets": {
+    "title": "WE EXTEND",
+    "we-code": "WE ARE CODE",
+    "we-design": "WE ARE DESIGN",
+    "sub-title": "YOUR BUSINESS IN DIGITAL",
+    "text": "OUR MAIN AREAS ARE DESIGN AUTOMATION, GRAPHIC DESIGN, WEBSITE DEVELOPMENT, URBAN DESIGN, ARCHITECTURE, ENVIRONMENTAL DESIGN, NAVIGATION SYSTEMS, INDUSTRIAL DESIGN, INTERFACE DESIGN, PETTERN CREATION, BOOK PUBLISHING. WE ARE A VARY CREATIVE AND VARY TECHNOLOGICAL COMPANY, COMBINING RESEARCH AND ANALUTICS WITH MIND-BLOWING IDEAS."
+  },
+  "stepper": {
+    "title": "HOW DOES THE MAGIC HAPPEN?",
+    "steps": [
+      {
+        "number": "01",
+        "title": "PREPARATION",
+        "text": "This is the very start. We are getting known of each other, setup communication, discuss general goals and requirements of the project. The key point is to mark down the value that the project is expected to bring you and plot user scenarios along with designer and quality engineer. It’s important as these are two persons who create and validate the look-and-feel of the creation. Also schedule and terms are set here."
+      },
+      {
+        "number": "02",
+        "title": "DESIGN",
+        "text": "Beauty is being born here. We believe that tools are used by people, that is why we create user experience driven designs, that touches target audience exactly. We also believe your project should make difference. That is why we make designs unique, bringing a special imprint of main idea to the visual look. Quality control also starts here."
+      },
+      {
+        "number": "03",
+        "title": "DEVELOPMENT",
+        "text": "Meat of functionality is being grown on the basis of written scenarios and design. Functionality is usually separated into parts to allow partial releases and earlier possibility of going live with minimum viable product. And to also provide updates on a regular basis. Time is the factor here. Also quality is. So it’s being controlled here too."
+      },
+      {
+        "number": "04",
+        "title": "VALIDATION",
+        "text": "Here is the fun part. User scenarios are being applied to the release candidate in many different ways. First by our engineers, then by the head of the team. And when finally all is passed and validated, it’s your time to get enjoyment of discovering updates. There is a multi-level protection applied to your happiness and time, so your clients can feel the same from your side."
+      },
+      {
+        "number": "05",
+        "title": "SUPPORT",
+        "text": "Time is never still. People are never the same. World spins and things happen. We are here to keep our creations running in tact with what’s surrounding them. And it’s not only about keeping them working. Here is where we can continuously improve the value brought by the project. As nothing gives a better view of the idea than time of the idea being alive!"
+      }
+    ]
+  },
+  "technologies": {
+    "title": "TECHNOLOGIES",
+    "sub-title": "A LOT OF THINGS THAT WE ARE GOOD AT"
+  },
+  "services": {
+    "title": "SERVICES",
+    "services-list": [
+      {
+        "title": "DEVELOPMENT",
+        "list": [
+          {
+            "title": "Landing Page",
+            "text": "A web-page created for the purpose of carrying out a potentialaction by a potential client, which leads to the collection ofcontact information."
+          },
+          {
+            "title": "Shop",
+            "text": "A site that allows the consumer to place an order for goods derictly online and seller - to sell this product"
+          },
+          {
+            "title": "Product Catalog",
+            "text": "The list of goods with specified characteristics and the prices which is a good information base for your buyers and partners is formed."
+          },
+          {
+            "title": "Corporate",
+            "text": "High-quality and full-fledged presentation of the company on the internet. Can setve as an internal resource for business communication of employees."
+          },
+          {
+            "title": "Web Business card",
+            "text": "A small web-page or a set of them that contains a maximum of information about the company (or enterpreneur) and its activities."
+          }
+        ]
+      },
+      {
+        "title": "DESIGN",
+        "list": [
+          {
+            "title": "Adaptive web design",
+            "text": "Design of web-resources that provides high-quality and full display of the site on any device, as well as maintains its correct interaction with the user."
+          },
+          {
+            "title": "Corporate identity",
+            "text": "A set of activities, includeing the development of logos, selection of colors and fonts, verbal and graphic elements that will ensure brand recognition."
+          },
+          {
+            "title": "Design of advertising products",
+            "text": "A number of products are designed in the appropriate corporate style, with the company's logo on it, for it's distribution and brand promotion."
+          },
+          {
+            "title": "Packaging design",
+            "text": "Creating a unique quality design for the company's product that will help attract more consumers and roles and raise sales."
+          },
+          {
+            "title": "Interface design",
+            "text": "Development of user interfacers in which ease of use and informativeness are no less important than the perfect appearance."
+          },
+          {
+            "title": "Illustrations and graphics",
+            "text": "Drawing unique Illustrations, icons, infographics and explainer animated videos."
+          }
+        ]
+      },
+      {
+        "title": "MARKETING",
+        "list": [
+          {
+            "title": "Target audience analysis",
+            "text": "Forming a \"portrait\" of customers, gathering informatio about their priorities and habits through communication, the use of web analytics to determine the characteristics of traffic. Development of marketing strategy."
+          },
+          {
+            "title": "SMM promotin",
+            "text": "Development of a content plan, maintaining social networks and blogs of the company, live communication with potential customers, setting up targeted advertising."
+          },
+          {
+            "title": "Contextual advertising",
+            "text": "Launch banners and text ads on search engines and their partner sites."
+          },
+          {
+            "title": "Photo production",
+            "text": "Creation of high-quality photos with the help of prefessional equipment, development of images by designers that will correspond to the context of the company's activities and the chosen goal of propmotion."
+          },
+          {
+            "title": "Advertising campaings",
+            "text": "Planning promotional activities as part of a marketing strategy aimed at promoting the brand."
+          }
+        ]
+      }
+    ]
+  }
+}

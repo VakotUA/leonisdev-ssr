@@ -12,7 +12,11 @@ import { TextAnimations } from '../../assets/animations/text'
 
 import Image from 'next/image'
 
+import useTranslation from 'next-translate/useTranslation'
+
 const Targets: React.FC = () => {
+  const { t } = useTranslation('magic')
+
   return (
     <motion.main
       className={style.Targets}
@@ -37,14 +41,14 @@ const Targets: React.FC = () => {
             variants={TextAnimations.leftToRight}
             className={style.Line}
           >
-            WE ARE CODE
+            {t('targets.we-code')}
           </Text.H5>
           <Text.H5
             custom={1}
             variants={TextAnimations.leftToRight}
             className={style.Line}
           >
-            WE ARE DESIGN
+            {t('targets.we-design')}
           </Text.H5>
 
           <Text.H2
@@ -52,14 +56,14 @@ const Targets: React.FC = () => {
             variants={TextAnimations.leftToRight}
             className={style.H2}
           >
-            WE EXTEND
+            {t('targets.title')}
           </Text.H2>
           <Text.H4
             custom={4}
             variants={TextAnimations.leftToRight}
             className={style.H4}
           >
-            YOUR BUSINESS TO DIGITAL
+            {t('targets.sub-title')}
           </Text.H4>
 
           <Text.Small
@@ -67,15 +71,7 @@ const Targets: React.FC = () => {
             variants={TextAnimations.leftToRight}
             className={style.WeAre}
           >
-            OUR MAIN AREAS ARE{' '}
-            <b>
-              DESIGN AUTOMATION, GRAPHIC DESIGN, WEBSITE DEVELOPMENT, URBAN
-              DESIGN, ARCHITECTURE, ENVIRONMENTAL DESIGN, NAVIGATION SYSTEMS,
-              INDUSTRIAL DESIGN, INTERFACE DESIGN, PETTERN CREATION, BOOK
-              PUBLISHING.
-            </b>{' '}
-            WE ARE A VARY CREATIVE AND VARY TECHNOLOGICAL COMPANY, COMBINING
-            RESEARCH AND ANALUTICS WITH MIND-BLOWING IDEAS.
+            {t('targets.text')}
           </Text.Small>
         </div>
       </Container>

@@ -18,7 +18,11 @@ import { TextAnimations } from '../../assets/animations/text'
 
 import Image from 'next/image'
 
+import useTranslation from 'next-translate/useTranslation'
+
 const Media: React.FC = () => {
+  const { t } = useTranslation('common')
+
   return (
     <motion.section
       className={style.Media}
@@ -27,9 +31,9 @@ const Media: React.FC = () => {
       viewport={{ amount: 0.4, once: true }}
     >
       <Container className={style.Content}>
-        <Cross.Filled size="60px" className={style.Particles} />
+        {/* <Cross.Filled size="60px" className={style.Particles} /> */}
         <Text.H3 custom={1} variants={TextAnimations.bottomToTop}>
-          JOIN OUR PRIDE
+          {t('media.join')}
         </Text.H3>
       </Container>
 
@@ -56,27 +60,27 @@ const Media: React.FC = () => {
         </motion.li>
         <motion.li custom={2} variants={TextAnimations.bottomToTop}>
           <a href="#">
-            <Image src={Instagram} alt="telegram" />
+            <Image src={Instagram} alt="instagram" />
           </a>
         </motion.li>
         <motion.li custom={3} variants={TextAnimations.bottomToTop}>
           <a href="#">
-            <Image src={LinkedIn} alt="telegram" />
+            <Image src={LinkedIn} alt="linkedin" />
           </a>
         </motion.li>
         <motion.li custom={3} variants={TextAnimations.bottomToTop}>
           <a href="#">
-            <Image src={Facebook} alt="telegram" />
+            <Image src={Facebook} alt="facebook" />
           </a>
         </motion.li>
         <motion.li custom={2} variants={TextAnimations.bottomToTop}>
           <a href="#">
-            <Image src={Twitter} alt="telegram" />
+            <Image src={Twitter} alt="twitter" />
           </a>
         </motion.li>
         <motion.li custom={1} variants={TextAnimations.bottomToTop}>
           <a href="#">
-            <Image src={YouTube} alt="telegram" />
+            <Image src={YouTube} alt="youtube" />
           </a>
         </motion.li>
       </motion.ul>

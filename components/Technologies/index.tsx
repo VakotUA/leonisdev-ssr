@@ -26,7 +26,11 @@ import Circle from '../../assets/images/ellipse.png'
 
 import Image from 'next/image'
 
+import useTranslation from 'next-translate/useTranslation'
+
 const Technologies: React.FC = () => {
+  const { t } = useTranslation('magic')
+
   return (
     <motion.section
       id="technologies"
@@ -46,14 +50,14 @@ const Technologies: React.FC = () => {
         <motion.div className={style.Title}>
           <div>
             <Text.H3 custom={1} variants={TextAnimations.leftToRight}>
-              TECHNOLOGIES
+              {t('technologies.title')}
             </Text.H3>
             <Text.P
               className={style.CustomLetterSpacing}
               custom={2.5}
               variants={TextAnimations.leftToRight}
             >
-              A LOT OF THINGS THAT WE ARE GOOD AT
+              {t('technologies.sub-title')}
             </Text.P>
           </div>
           <div>

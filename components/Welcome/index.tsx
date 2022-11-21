@@ -24,7 +24,11 @@ import { useLockedBody } from '../../hooks/useLockedBody'
 
 import Image from 'next/image'
 
+import useTranslation from 'next-translate/useTranslation'
+
 const Welcome: React.FC = () => {
+  const { t } = useTranslation('home')
+
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false)
 
   const [locked, setLocked] = useLockedBody()
@@ -62,21 +66,21 @@ const Welcome: React.FC = () => {
                 variants={TextAnimations.leftToRight}
                 className={style.Line}
               >
-                WE ARE CODE
+                {t('welcome.we-code')}
               </Text.H5>
               <Text.H5
                 custom={1}
                 variants={TextAnimations.leftToRight}
                 className={style.Line}
               >
-                WE ARE DESIGN
+                {t('welcome.we-design')}
               </Text.H5>
 
               <Text.H1 custom={3} variants={TextAnimations.leftToRight}>
-                LEONIS
+                {t('welcome.title')}
               </Text.H1>
               <Text.H2 custom={4} variants={TextAnimations.leftToRight}>
-                DEV STUDIO
+                {t('welcome.studio')}
               </Text.H2>
 
               <Text.H4
@@ -84,7 +88,7 @@ const Welcome: React.FC = () => {
                 variants={TextAnimations.leftToRight}
                 className={style.Line}
               >
-                WE CREATE FOR YOU
+                {t('welcome.for-you')}
               </Text.H4>
             </div>
 
@@ -94,7 +98,7 @@ const Welcome: React.FC = () => {
               className={style.Button}
               onClick={() => setIsModalVisible(!isModalVisible)}
             >
-              DISCUSS THE PROJECT
+              {t('welcome.button')}
             </MotionButton>
           </div>
 

@@ -1,0 +1,35 @@
+{
+  "welcome": {
+    "title": "LEONIS",
+    "we-code": "WE ARE CODE",
+    "we-design": "WE ARE DESIGN",
+    "studio": "DEV STUDIO",
+    "for-you": "WE CREATE FOR YOU",
+    "button": "DISCUSS THE PROJECT"
+  },
+  "skills": {
+    "title": "WHAT WE DO",
+    "sub-title": "OUR SKILLS ARE",
+
+    "collumn-1": {
+      "title": "A LOT OF THINGS THAT WE ARE GOOD AT",
+      "list-1": ["LANDING", "BLOG", "E-COMMERCE", "WEB CRM"],
+      "list-2": [
+        "UI/UX DESIGN",
+        "HTMLS, CSS3",
+        "JAVASCRIPT, JQUERY, JQUERY UI, VUEJS",
+        "DJANGO, AIOGRAM, SELENIUM",
+        "MYSQL, POSTGRESQL"
+      ]
+    },
+    "collumn-2": {
+      "title": "WE BUILD WEBSITES AND APPS, SO YOU DON'T HAVE TO!",
+      "text-1": "We are born to bring ideas to life, saving up your time and peace for things that really matter.",
+      "text-2": "Is it a website, mobile app or just a holiday postcard.",
+      "text-3": "We make it, testing and keep it running even while you sleep.",
+      "text-4": "We find it astonishing how our cooperation makes the world a better place."
+    },
+
+    "button": "HOW DOES THE MAGIC HAPPEN?"
+  }
+}

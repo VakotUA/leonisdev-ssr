@@ -1,0 +1,23 @@
+{
+  "header": {
+    "home": "HOME",
+    "about-us": "ABOUT US",
+    "services": "SERVICES",
+    "contacts": "CONTACTS"
+  },
+  "media": {
+    "join": "JOIN OUR PRIDE"
+  },
+  "contacts": {
+    "title": "GET IN TOUCH",
+    "subtitle": "LET'S MAKE GREAT THINGS HAPPEN",
+    "form": {
+      "title": "WRITE A MESSAGE",
+      "name": "NAME",
+      "phone": "PHONE NUMBER",
+      "mail": "EMAIL",
+      "message": "MESSAGE",
+      "send": "SEND MESSAGE"
+    }
+  }
+}

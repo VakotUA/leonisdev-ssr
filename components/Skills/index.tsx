@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './style.module.scss'
 import { Text } from '../UI/Text'
 import { Separator } from '../UI/Separator'
@@ -16,7 +16,22 @@ import Arrow from '../../assets/svgs/arrow.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import useTranslation from 'next-translate/useTranslation'
+
 const Skills: React.FC = () => {
+  const { t } = useTranslation('home')
+
+  const HARD_SKILLS = t<string[]>(
+    'skills.collumn-1.list-1',
+    {},
+    { returnObjects: true }
+  )
+  const SOFT_SKILLS = t<string[]>(
+    'skills.collumn-1.list-2',
+    {},
+    { returnObjects: true }
+  )
+
   return (
     <motion.section
       id="about"
@@ -27,10 +42,10 @@ const Skills: React.FC = () => {
     >
       <Container className={style.Content}>
         <Text.H2 custom={1} variants={TextAnimations.leftToRight}>
-          WHAT WE DO
+          {t('skills.title')}
         </Text.H2>
         <Text.H3 custom={2} variants={TextAnimations.leftToRight}>
-          OUR SKILLS ARE:
+          {t('skills.sub-title')}
         </Text.H3>
 
         <div className={style.Collumns}>
@@ -46,41 +61,32 @@ const Skills: React.FC = () => {
                 custom={2.5}
                 variants={TextAnimations.leftToRight}
               >
-                A LOT OF THINGS THAT WE ARE GOOD AT
+                {t('skills.collumn-1.title')}
               </Text.H5>
             </div>
 
             <div className={style.ListCollumns}>
               <div>
-                <Text.P custom={1} variants={TextAnimations.topToBottom}>
-                  LANDING
-                </Text.P>
-                <Text.P custom={1.5} variants={TextAnimations.topToBottom}>
-                  BLOG
-                </Text.P>
-                <Text.P custom={2} variants={TextAnimations.topToBottom}>
-                  E-COMMERCE
-                </Text.P>
-                <Text.P custom={2.5} variants={TextAnimations.topToBottom}>
-                  WEB CRM
-                </Text.P>
+                {HARD_SKILLS.map((item: string, index: number) => (
+                  <Text.P
+                    key={index}
+                    custom={1 + index / 2}
+                    variants={TextAnimations.topToBottom}
+                  >
+                    {item}
+                  </Text.P>
+                ))}
               </div>
               <div>
-                <Text.P custom={3} variants={TextAnimations.topToBottom}>
-                  UI/UX DESIGN
-                </Text.P>
-                <Text.P custom={3.5} variants={TextAnimations.topToBottom}>
-                  HTML5, CSS3
-                </Text.P>
-                <Text.P custom={4} variants={TextAnimations.topToBottom}>
-                  JAVASCRIPT, JQUERY, JQUERY UI, VUEJS
-                </Text.P>
-                <Text.P custom={4.5} variants={TextAnimations.topToBottom}>
-                  DJANGO, AIOGRAM, SELENIUM
-                </Text.P>
-                <Text.P custom={5} variants={TextAnimations.topToBottom}>
-                  MYSQL, POSTGRESQL
-                </Text.P>
+                {SOFT_SKILLS.map((item: string, index: number) => (
+                  <Text.P
+                    key={index}
+                    custom={1 + index / 2}
+                    variants={TextAnimations.topToBottom}
+                  >
+                    {item}
+                  </Text.P>
+                ))}
               </div>
             </div>
 
@@ -93,7 +99,7 @@ const Skills: React.FC = () => {
                 custom={2}
                 variants={TextAnimations.topToBottom}
               >
-                HOW DOES THE MAGIC HAPPEN?
+                {t('skills.button')}
                 <span className={style.Arrow}>
                   <Image src={Arrow} alt="arrow" height={25} width={50} />
                 </span>
@@ -119,22 +125,20 @@ const Skills: React.FC = () => {
                 custom={2.5}
                 variants={TextAnimations.rightToLeft}
               >
-                WE BUILD WEBSITES AND APPS, SO YOU DON&apos;T HAVE TO!
+                {t('skills.collumn-2.title')}
               </Text.H5>
             </div>
             <div className={style.Text}>
               <Text.Small custom={4} variants={TextAnimations.rightToLeft}>
-                We are born to bring ideas to life, saving up your time and
-                peace for things that really matter.
+                {t('skills.collumn-2.text-1')}
                 <br />
-                Is it a website, mobile app or just a holiday postcard.
+                {t('skills.collumn-2.text-2')}
               </Text.Small>
 
               <Text.Small custom={6} variants={TextAnimations.rightToLeft}>
-                We make it, testit and keep it running even while you sleep.
+                {t('skills.collumn-2.text-3')}
                 <br />
-                We find it astonishing how our cooperation makes the world a
-                better place
+                {t('skills.collumn-2.text-4')}
               </Text.Small>
             </div>
           </motion.div>

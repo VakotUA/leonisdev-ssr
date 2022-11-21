@@ -19,7 +19,21 @@ import { TextAnimations } from '../../assets/animations/text'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import { useRouter } from 'next/router'
+
+import useTranslation from 'next-translate/useTranslation'
+import { MotionSelect } from '../UI/LanguageSelect'
+
 const Header: React.FC = () => {
+  const router = useRouter()
+  const { t } = useTranslation('common')
+
+  const handleLocaleChange = (language: string) => {
+    router.push(router.route, router.asPath, {
+      locale: language,
+    })
+  }
+
   const menu = useAppSelector((state) => state.menu)
   const dispatch = useAppDispatch()
   const { toggleMenu } = menuSlice.actions
@@ -53,21 +67,21 @@ const Header: React.FC = () => {
               variants={TextAnimations.topToBottom}
               onClick={() => dispatch(toggleMenu(false))}
             >
-              <Link href="/">HOME</Link>
+              <Link href="/">{t('header.home')}</Link>
             </motion.li>
             <motion.li
               custom={1}
               variants={TextAnimations.topToBottom}
               onClick={() => dispatch(toggleMenu(false))}
             >
-              <Link href="/#about">ABOUT US</Link>
+              <Link href="/#about">{t('header.about-us')}</Link>
             </motion.li>
             <motion.li
               custom={1.5}
               variants={TextAnimations.topToBottom}
               onClick={() => dispatch(toggleMenu(false))}
             >
-              <Link href="/magic/#services">SERVICES</Link>
+              <Link href="/magic/#services">{t('header.services')}</Link>
             </motion.li>
             {/* <motion.li
               custom={2}
@@ -81,7 +95,7 @@ const Header: React.FC = () => {
               variants={TextAnimations.topToBottom}
               onClick={() => dispatch(toggleMenu(false))}
             >
-              <Link href="/#contacts">CONTACTS</Link>
+              <Link href="/#contacts">{t('header.contacts')}</Link>
             </motion.li>
           </motion.ul>
         </motion.div>
@@ -96,6 +110,15 @@ const Header: React.FC = () => {
           <motion.a custom={1.5} variants={TextAnimations.rightToLeft} href="/">
             <Image width={32} height={32} src={Facebook} alt="facebook" />
           </motion.a>
+
+          <MotionSelect
+            custom={2}
+            variants={TextAnimations.rightToLeft}
+            className={style.Select}
+            onSelect={(value) => handleLocaleChange(value)}
+            value={router.locale}
+            options={router.locales}
+          />
 
           <div className={style.Burger}>
             <MenuButton />
