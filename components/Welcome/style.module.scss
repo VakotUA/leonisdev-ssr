@@ -83,7 +83,7 @@
 }
 
 .ImageBlock {
-  // display: flex;
+  display: flex;
 
   position: absolute;
   left: 55%;
@@ -96,6 +96,8 @@
   @media (max-width: $md5) {
     top: 30%;
   }
+
+  mix-blend-mode: normal;
 }
 
 .Button {

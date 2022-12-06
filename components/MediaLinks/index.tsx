@@ -31,7 +31,6 @@ const Media: React.FC = () => {
       viewport={{ amount: 0.4, once: true }}
     >
       <Container className={style.Content}>
-        {/* <Cross.Filled size="60px" className={style.Particles} /> */}
         <Text.H3 custom={1} variants={TextAnimations.bottomToTop}>
           {t('media.join')}
         </Text.H3>

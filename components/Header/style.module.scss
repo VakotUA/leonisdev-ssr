@@ -41,6 +41,7 @@
 
 .Links {
   display: inline-flex;
+  align-items: center;
   gap: 2rem;
 
   a {
@@ -132,7 +133,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  // width: 300px;
   padding: 20px;
 
   .MenuButtons {
@@ -166,4 +166,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1440px) {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
 }
