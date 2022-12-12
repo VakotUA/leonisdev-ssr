@@ -5,150 +5,242 @@
   width: 100%;
   background-color: black;
 
-  padding-top: 120px;
-
-  @media (max-width: $md3) {
-    padding-top: 50px;
-  }
-
   overflow: hidden;
-}
-
-.Content {
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media (max-width: $md3) {
-    align-items: center;
-  }
-
-  padding-left: calc(0px + (50 - 0) * ((100vw - 320px) / (1600 - 320)));
-
-  h3,
-  h5 {
-    margin: 0 36px;
-    @media (max-width: $md4) {
-      text-align: center;
-    }
-  }
-
-  h5 {
-    @include fluid-type(320px, 1600px, 12px, 28px);
-    font-weight: 900;
-    letter-spacing: 0.15rem;
-    word-spacing: 0;
-  }
 }
 
 .Collumns {
+  width: 100%;
+
   display: flex;
-  min-height: 700px;
+  flex-wrap: wrap;
 
-  @media (max-width: $md3) {
-    flex-direction: column;
-  }
+  .Collumn {
+    flex: 1 1 50%;
 
-  margin-top: 32px;
-
-  .Contact,
-  .Form {
-    z-index: 2;
+    height: 100%;
+    min-height: 500px;
+    min-width: 540px;
 
     @media (max-width: $md3) {
-      flex: 0 1 1;
-    }
-  }
-
-  .Contact {
-    flex: 0 1 60%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-top: 100px;
-
-    @media (max-width: $md3) {
-      margin-top: 20px;
-      padding-left: 36px;
+      height: auto;
     }
 
-    > div:first-of-type {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
-
-      @media (max-width: $md3) {
-        gap: 2rem;
-      }
-
-      z-index: 2;
-    }
-
-    span {
-      display: inline-flex;
-      align-items: center;
-      gap: 1.25rem;
-
-      p {
-        @include fluid-type(320px, 1600px, 16px, 36px);
-        white-space: nowrap;
-      }
-
-      img {
-        height: calc(25px + (50 - 25) * ((100vw - 320px) / (1600 - 320)));
-      }
-    }
-
-    position: relative;
-
-    .Image {
-      bottom: -150px;
-      position: absolute;
-
-      @media (max-width: $md3) {
-        display: none;
-      }
-    }
-  }
-
-  .Form {
-    flex: 0 1 45%;
-
-    @media (min-width: $md3) {
-      min-width: 700px;
-    }
-
-    margin-top: 80px;
-    position: relative;
-    background-color: #0d0d0d;
-    padding: 40px 80px;
-
-    @media (max-width: $md2) {
-      padding: 40px 80px;
-    }
-
-    @media (max-width: $md3) {
-      margin-top: 50px;
-      padding: 70px 100px;
-    }
-
-    @media (max-width: $md4) {
-      padding: 70px 40px;
-    }
-
-    .Particles {
-      position: absolute;
-      left: 0;
-      top: 50px;
-
-      transform: translateX(-50%);
-
-      @media (max-width: $md3) {
-        display: none;
-      }
+    &:nth-child(2) {
+      background-color: #0d0d0d;
     }
   }
 }
+
+.Form {
+  padding: 40px;
+  padding-top: 120px;
+
+  position: relative;
+
+  .Particles {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+
+    @media (max-width: $md3) {
+      display: none;
+    }
+  }
+}
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 100px;
+
+  @media (max-width: $md3) {
+    margin-top: 20px;
+    padding-left: 36px;
+  }
+
+  > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+
+    @media (max-width: $md3) {
+      gap: 2rem;
+    }
+
+    z-index: 2;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    p {
+      @include fluid-type(320px, 1600px, 16px, 36px);
+      white-space: nowrap;
+    }
+
+    img {
+      height: calc(25px + (50 - 25) * ((100vw - 320px) / (1600 - 320)));
+    }
+  }
+
+  position: relative;
+
+  .Image {
+    width: 100%;
+
+    max-width: 700px;
+
+    bottom: -260px;
+    position: absolute;
+
+    @media (max-width: 1079px) {
+      display: none;
+    }
+  }
+}
+
+// .Content {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+
+//   @media (max-width: $md3) {
+//     align-items: center;
+//   }
+
+//   padding-left: calc(0px + (50 - 0) * ((100vw - 320px) / (1600 - 320)));
+
+//   h3,
+//   h5 {
+//     margin: 0 36px;
+//     @media (max-width: $md4) {
+//       text-align: center;
+//     }
+//   }
+
+//   h5 {
+//     @include fluid-type(320px, 1600px, 12px, 28px);
+//     font-weight: 900;
+//     letter-spacing: 0.15rem;
+//     word-spacing: 0;
+//   }
+// }
+
+// .Collumns {
+//   display: flex;
+//   min-height: 700px;
+
+//   @media (max-width: $md3) {
+//     flex-direction: column;
+//   }
+
+//   margin-top: 32px;
+
+//   .Contact,
+//   .Form {
+//     z-index: 2;
+
+//     @media (max-width: $md3) {
+//       flex: 0 1 1;
+//     }
+//   }
+
+//   .Contact {
+//     flex: 0 1 60%;
+
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     margin-top: 100px;
+
+//     @media (max-width: $md3) {
+//       margin-top: 20px;
+//       padding-left: 36px;
+//     }
+
+//     > div:first-of-type {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 4rem;
+
+//       @media (max-width: $md3) {
+//         gap: 2rem;
+//       }
+
+//       z-index: 2;
+//     }
+
+//     span {
+//       display: inline-flex;
+//       align-items: center;
+//       gap: 1.25rem;
+
+//       p {
+//         @include fluid-type(320px, 1600px, 16px, 36px);
+//         white-space: nowrap;
+//       }
+
+//       img {
+//         height: calc(25px + (50 - 25) * ((100vw - 320px) / (1600 - 320)));
+//       }
+//     }
+
+//     position: relative;
+
+//     .Image {
+//       bottom: -150px;
+//       position: absolute;
+
+//       @media (max-width: $md3) {
+//         display: none;
+//       }
+//     }
+//   }
+
+//   .Form {
+//     flex: 0 1 45%;
+
+//     @media (min-width: $md3) {
+//       min-width: 700px;
+//     }
+
+//     margin-top: 80px;
+//     position: relative;
+//     background-color: #0d0d0d;
+//     padding: 40px 80px;
+
+//     @media (max-width: $md2) {
+//       padding: 40px 80px;
+//     }
+
+//     @media (max-width: $md3) {
+//       margin-top: 50px;
+//       padding: 70px 100px;
+//     }
+
+//     @media (max-width: $md4) {
+//       padding: 70px 40px;
+//     }
+
+//     .Particles {
+//       position: absolute;
+//       left: 0;
+//       top: 50px;
+
+//       transform: translateX(-50%);
+
+//       @media (max-width: $md3) {
+//         display: none;
+//       }
+//     }
+//   }
+// }

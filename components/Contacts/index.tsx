@@ -28,22 +28,70 @@ const Contacts: React.FC = () => {
       whileInView="visible"
       viewport={{ amount: 0.2, once: true }}
     >
-      <Container>
+      <div className={style.Collumns}>
         <motion.div
-          className={style.Content}
+          className={style.Collumn}
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.2, once: true }}
         >
-          <Text.H3 custom={1} variants={TextAnimations.leftToRight}>
-            {t('contacts.title')}
-          </Text.H3>
-          <Text.H5 custom={2} variants={TextAnimations.leftToRight}>
-            {t('contacts.subtitle')}
-          </Text.H5>
-        </motion.div>
-      </Container>
+          <motion.div
+            className={style.Contact}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+          >
+            <Text.H3 custom={1} variants={TextAnimations.leftToRight}>
+              {t('contacts.title')}
+            </Text.H3>
+            <Text.H5 custom={2} variants={TextAnimations.leftToRight}>
+              {t('contacts.subtitle')}
+            </Text.H5>
 
+            <div>
+              <motion.span custom={1} variants={TextAnimations.bottomToTop}>
+                <Image src={Paw} alt="paw" />
+                <Text.P custom={1} variants={TextAnimations.bottomToTop}>
+                  <a href="tel:+380662047960">+38 (066) 204 79 60</a>
+                </Text.P>
+              </motion.span>
+              <motion.span custom={2} variants={TextAnimations.bottomToTop}>
+                <Image src={Paw} alt="paw" />
+                <Text.P>
+                  <a href="tel:+380662047960">+38 (066) 204 79 60</a>
+                </Text.P>
+              </motion.span>
+              <motion.span custom={3} variants={TextAnimations.bottomToTop}>
+                <Image src={Paw} alt="paw" />
+                <Text.P>
+                  <a href="mailto:contact@leonis.dev">CONTACT@LEONIS.DEV</a>
+                </Text.P>
+              </motion.span>
+            </div>
+
+            <div className={style.Image}>
+              <Image src={Lion} alt="lion" />
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className={style.Collumn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+        >
+          <motion.div
+            className={style.Form}
+            variants={TextAnimations.rightToLeft}
+          >
+            <Cross.Filled size="64px" className={style.Particles} />
+            <Form />
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* 
       <div className={style.Collumns}>
         <motion.div
           className={style.Contact}
@@ -84,6 +132,7 @@ const Contacts: React.FC = () => {
           <Form />
         </motion.div>
       </div>
+      */}
     </motion.footer>
   )
 }
