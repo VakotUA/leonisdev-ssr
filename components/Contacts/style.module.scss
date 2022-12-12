@@ -33,8 +33,11 @@
 }
 
 .Form {
-  padding: 40px;
+  padding-inline: 100px;
   padding-top: 158px;
+  @media (max-width: $md3) {
+    padding-inline: 10vw;
+  }
 
   position: relative;
 
