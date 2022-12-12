@@ -41,14 +41,14 @@ const Contacts: React.FC = () => {
             whileInView="visible"
             viewport={{ amount: 0.2, once: true }}
           >
-            <Text.H3 custom={1} variants={TextAnimations.leftToRight}>
-              {t('contacts.title')}
-            </Text.H3>
-            <Text.H5 custom={2} variants={TextAnimations.leftToRight}>
-              {t('contacts.subtitle')}
-            </Text.H5>
-
             <div>
+              <Text.H3 custom={1} variants={TextAnimations.leftToRight}>
+                {t('contacts.title')}
+              </Text.H3>
+              <Text.H5 custom={2} variants={TextAnimations.leftToRight}>
+                {t('contacts.subtitle')}
+              </Text.H5>
+
               <motion.span custom={1} variants={TextAnimations.bottomToTop}>
                 <Image src={Paw} alt="paw" />
                 <Text.P custom={1} variants={TextAnimations.bottomToTop}>
