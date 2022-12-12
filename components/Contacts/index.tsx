@@ -3,10 +3,8 @@ import style from './style.module.scss'
 import { Text } from '../UI/Text'
 
 import Paw from '../../assets/images/lapka.png'
-import Lion from '../../assets/images/lion_foot.jpg'
-import FormLion from '../../assets/images/lion_contacts.png'
-
-import Container from '../Layout/Container'
+// import Lion from '../../assets/images/lion_foot.jpg'
+import Lion from '../../assets/images/lion_foot.png'
 
 import { ContactForm as Form } from '../UI/Form'
 
@@ -34,21 +32,26 @@ const Contacts: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.2, once: true }}
+          style={{ backgroundImage: `url(${Lion.src})` }}
         >
+          <div className={style.Shadow} />
+
           <motion.div
             className={style.Contact}
             initial="hidden"
             whileInView="visible"
             viewport={{ amount: 0.2, once: true }}
           >
-            <div>
+            <div className={style.Title}>
               <Text.H3 custom={1} variants={TextAnimations.leftToRight}>
                 {t('contacts.title')}
               </Text.H3>
               <Text.H5 custom={2} variants={TextAnimations.leftToRight}>
                 {t('contacts.subtitle')}
               </Text.H5>
+            </div>
 
+            <div>
               <motion.span custom={1} variants={TextAnimations.bottomToTop}>
                 <Image src={Paw} alt="paw" />
                 <Text.P custom={1} variants={TextAnimations.bottomToTop}>
@@ -67,10 +70,6 @@ const Contacts: React.FC = () => {
                   <a href="mailto:contact@leonis.dev">CONTACT@LEONIS.DEV</a>
                 </Text.P>
               </motion.span>
-            </div>
-
-            <div className={style.Image}>
-              <Image src={Lion} alt="lion" />
             </div>
           </motion.div>
         </motion.div>

@@ -6,13 +6,15 @@
 
   .Image {
     overflow: hidden;
-    height: 130%;
+
+    width: 50%;
+    max-width: 900px;
     z-index: 0;
 
     position: absolute;
-    right: -8%;
-    top: 60%;
-    transform: translateY(-50%);
+    right: -10%;
+    top: 50%;
+    transform: translateY(-30%);
 
     @media (max-width: $md3) {
       display: none;

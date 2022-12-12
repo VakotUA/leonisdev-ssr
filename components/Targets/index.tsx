@@ -5,7 +5,7 @@ import { Text } from '../UI/Text'
 import { Cross } from '../UI/Particles'
 import Circle from '../../assets/images/ellipse.png'
 
-import LionImage from '../../assets/images/lion_1.png'
+import LionImage from '../../assets/images/Magic_lion_2.png'
 
 import { motion } from 'framer-motion'
 import { TextAnimations } from '../../assets/animations/text'

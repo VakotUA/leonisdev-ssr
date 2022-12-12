@@ -21,7 +21,6 @@ import ReactIMG from '../../assets/images/react.png'
 import Selenium from '../../assets/images/Selenium.png'
 import VueJS from '../../assets/images/VueJS.png'
 
-import Lion from '../../assets/images/lion_2(bgfree).png'
 import Circle from '../../assets/images/ellipse.png'
 
 import Image from 'next/image'
@@ -39,9 +38,6 @@ const Technologies: React.FC = () => {
       whileInView="visible"
       viewport={{ amount: 0.2, once: true }}
     >
-      <div className={style.Image}>
-        <Image src={Lion} alt="lion" />
-      </div>
       <div className={style.Circle}>
         <Image src={Circle} alt="circle" />
       </div>

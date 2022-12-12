@@ -6,7 +6,7 @@ import { Text } from '../UI/Text'
 import { motion } from 'framer-motion'
 import { TextAnimations } from '../../assets/animations/text'
 
-import Image from '../../assets/images/lion_3.png'
+import Image from '../../assets/images/lion_3_new_2.png'
 import { Cross } from '../UI/Particles'
 
 import useTranslation from 'next-translate/useTranslation'
@@ -34,8 +34,8 @@ const Services: React.FC = () => {
       whileInView="visible"
       viewport={{ amount: 0.05, once: true }}
     >
-      <div className={style.Background1} />
-      <div className={style.Background2} />
+      <div className={style.Shadow} />
+
       <Container className={style.Content}>
         <div className={style.Title}>
           <Text.H3 custom={1} variants={TextAnimations.topToBottom}>
